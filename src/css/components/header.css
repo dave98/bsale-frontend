@@ -13,6 +13,7 @@
     padding: 2rem 10%;
 }
 
+
 .logo {
     font-size: 2.5rem;
     color: var(--black);
@@ -53,7 +54,7 @@
 .search-form {
     position: absolute;
     top: 100%;
-    right: -100%;
+    right: -30%;
     width: 30%;
     height: 4rem;
     background: #fff;   
@@ -65,8 +66,10 @@
     border: .1rem solid rgba(0, 0, 0, .2);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     overflow: hidden;
+    transition-property: right;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
 }
-
 .search-form input {
     height: 100%;
     width: 100%;
@@ -81,6 +84,50 @@
     right: 0;
 }
 
+
 #menu-btn {
     display: none;
+}
+
+
+/*Media queries*/
+@media (max-width: 1000px) {
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 750px){
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        display: flex;
+        flex-direction: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .navbar a {
+        display: block;
+        margin: 1rem;
+    }
+    .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .search-form {
+        right: -100%;
+        width: 100%;
+        top: 100%; 
+        border-radius: 0;
+    }
+
+}
+
+@media (max-width: 450px){
 }

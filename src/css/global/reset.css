@@ -13,6 +13,7 @@
 }
 
 html {
+    font-size: 90%;
     scroll-behavior: smooth;
 }
 
@@ -29,3 +30,9 @@ html::-webkit-scrollbar-thumb {
     border-radius: 5rem;
 }
 
+/*Media queries*/
+@media (max-width: 1000px) {
+    html {
+        font-size: 60%;
+    }
+}
