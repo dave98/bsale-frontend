@@ -1,1 +1,3 @@
-console.log("Hello world");
+import { globalEvents } from "./scripts/global.js";
+
+globalEvents();

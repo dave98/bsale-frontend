@@ -49,6 +49,38 @@
     -webkit-text-stroke: .1rem var(--red);
 }
 
+
+.search-form {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 30%;
+    height: 4rem;
+    background: #fff;   
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1.5rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--black);
+    padding: 0 1.2rem 0 0;
+}
+.search-form label {
+    font-size: 1.5rem;
+}
+.search-form.active {
+    right: 0;
+}
+
 #menu-btn {
     display: none;
 }
