@@ -1,0 +1,4 @@
+@import url("src/css/global.css");
+
+/*Styles for individual components*/
+@import url("src/css/components/header.css");
