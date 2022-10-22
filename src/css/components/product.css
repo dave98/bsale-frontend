@@ -1,0 +1,119 @@
+@keyframes fadeUp {
+    0% {
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+}
+
+.product-box{
+    width:  36rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .2);
+}
+.product-box.hide{
+    display: none;
+}
+.product-box.active{
+    display: block;
+    animation:  fadeUp .4s linear;
+}
+
+
+
+.product-box .icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 35rem;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: bottom;
+}
+.product-box:hover .icons{
+    transform: scale(1);
+}
+.product-box .icons a{
+    font-size: 2rem;
+    height: 5rem;
+    width: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    background-color: white;
+    border-radius: .5rem ;
+}
+
+
+
+.product-box .image{
+    height: 35rem; 
+    width: 100%;
+    overflow: hidden;
+}
+.product-box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
+.product-box:hover .image img{
+    transform: scale(1.1);
+}
+
+
+
+.product-box .content{
+    padding: 1rem 1.5rem;
+}
+.product-box .content h3{
+    font-size: 2rem;
+    letter-spacing: 0;
+    color: var(--black);
+    font-weight: normal;
+}
+.product-box .content .price{
+    padding: 1rem  0;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.product-box .content .price .amount{
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--black);
+}
+.product-box .content .price .cut{
+    font-size: 1.3rem;
+    text-decoration: line-through;
+    color: var(--light-color);
+}
+.product-box .content .price .offer{
+    font-size: 2rem;
+    color: var(--red);
+}
+.product-box .content .stars{
+    font-size: 1.2rem;
+}
+.product-box .content .stars i{
+    color: gold;
+}
+.product-box .content .stars span{
+    font-size: 1.2rem;
+    color: var(--light-color);
+}
+
+
+
+/*Media queries*/
+@media (max-width: 450px) {
+    .product-box{
+        width: 100%;
+    }
+}

@@ -1,0 +1,46 @@
+.products .filter-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 2rem;
+    gap: 2rem;
+}
+.products .filter-buttons .buttons{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.products .filter-buttons .buttons:hover, 
+.products .filter-buttons .buttons.active {
+    color: var(--red);
+}
+
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.heading {
+    font-size: 4rem;
+    font-weight: 500;
+    color: black;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.heading span {
+     color: var(--red);
+}
+
+@media (max-width: 450px) {
+    .heading {
+        padding: 3rem;
+    }
+    .products .box-container .box{
+        width: 100%;
+    }
+}
+

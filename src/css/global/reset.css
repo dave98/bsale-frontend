@@ -15,10 +15,11 @@
 html {
     font-size: 90%;
     scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
 }
 
 html::-webkit-scrollbar {
-    width: 1rem;
+    width: .5rem;
 }
 
 html::-webkit-scrollbar-track {
@@ -30,9 +31,17 @@ html::-webkit-scrollbar-thumb {
     border-radius: 5rem;
 }
 
+section {
+    padding: 2rem 9%;
+}
+
 /*Media queries*/
 @media (max-width: 1000px) {
     html {
         font-size: 60%;
+    }
+
+    section {
+        padding: 2rem;
     }
 }

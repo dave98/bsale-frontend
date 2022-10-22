@@ -1,0 +1,58 @@
+.home {
+    padding: 0;
+    padding-top: 8rem;
+}
+
+.slider{
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    padding-left: 7%;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.content span{
+    font-size: 2rem;
+    color: var(--light-color);
+}
+.content h3{
+    font-size: 6rem;
+    font-weight: 600;
+    letter-spacing: .4vw;
+    color: var(--black);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    background-color: var(--red);
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: black;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    height: 6rem;
+    width: 3rem;
+    border-radius: .5rem;
+    background-color: transparent;
+    color: black ;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+
+/*Media queries*/
+@media (max-width: 1000px) {
+    .slider {
+        padding-left: 4%;
+    }
+}
