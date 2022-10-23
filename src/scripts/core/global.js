@@ -36,27 +36,31 @@ function addSwipperController(){
     });
 }
 
-function filterInteraction(){
-    filterBtn.forEach(category => {
-        category.addEventListener("click", () => {
-            filterBtn.forEach((btn) => { btn.classList.remove("active"); }) // Removing active state for all category
-            category.classList.add("active");   // Adding active state for current selected category
+function filterInteraction(){}
 
-            let dataFilter = category.getAttribute("data-filter");  // Obtaining category filter value
-            filterItem.forEach(product => {
-                // Default values for all products
-                product.classList.remove("active");
-                product.classList.add("hide");
-                // Filtering
-                if(product.getAttribute("data-item") == dataFilter || 
-                    dataFilter == "all"){
-                        product.classList.remove("hide");
-                        product.classList.add("active");
-                }
-            })
-        })
-    })
-}
+// function filterInteraction(){
+//     console.log(filterBtn);
+//     filterBtn.forEach(category => {
+//         category.addEventListener("click", () => {
+//             filterBtn.forEach((btn) => { btn.classList.remove("active"); }) // Removing active state for all category
+//             category.classList.add("active");   // Adding active state for current selected category
+// 
+//             let dataFilter = category.getAttribute("data-filter");  // Obtaining category filter value
+//             filterItem.forEach(product => {
+//                 // Default values for all products
+//                 product.classList.remove("active");
+//                 product.classList.add("hide");
+//                 // Filtering
+//                 if(product.getAttribute("data-item") == dataFilter || 
+//                     dataFilter == "all"){
+//                         product.classList.remove("hide");
+//                         product.classList.add("active");
+//                 }
+//             })
+//         })
+//     })
+// }
+
 
 // Default behavior when scrolling
 function behaviorOnScroll(){
