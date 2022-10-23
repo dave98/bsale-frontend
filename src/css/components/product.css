@@ -63,7 +63,7 @@
     object-fit: scale-down;
 }
 .product-box:hover .image img{
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 
 
