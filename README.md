@@ -18,7 +18,7 @@ The easiest way to deploy this project is with [VisualStudioCode](https://code.v
 
 ## Interaction
 
-By the moment, there are two possible ways to interact with the application. Go for the search button and type something. The application will sent a request to the backend system in order to find products with a name similar to what you wrote. The second interaction works with the category bar  located at the "Available Products" section. Just press a category and the system will send a new request to get all products in that category.
+By the moment, there are two possible ways to interact with the application. Go for the search button at the header section and type something. The application will sent a request to the backend system in order to find products with a name similar to what you wrote. The second interaction works with the category bar  located at the beginning of "Available Products" section. Just press a category and the system will send a new request to get all products in that category.
 
 ## Stay in touch
 

@@ -6,7 +6,8 @@ let filterItem = document.querySelectorAll(".products .box-container .product-bo
 
 // Search icon interaction
 function searchFormInteraction(){
-    document.getElementById("search-btn").addEventListener("click", () => {
+    document.getElementById("search-btn").addEventListener("click", (e) => {
+        document.getElementById("products").scrollIntoView();
         searchForm.classList.toggle("active");
         navbar.classList.remove("active");
     })
@@ -36,8 +37,6 @@ function addSwipperController(){
     });
 }
 
-function filterInteraction(){}
-
 // function filterInteraction(){
 //     console.log(filterBtn);
 //     filterBtn.forEach(category => {
@@ -65,8 +64,12 @@ function filterInteraction(){}
 // Default behavior when scrolling
 function behaviorOnScroll(){
     window.onscroll = () => {
-        searchForm.classList.remove("active");
         navbar.classList.remove("active");
+    }
+    window.onclick = (e) => {
+        if(e.target.id == "product-container"){
+            searchForm.classList.remove("active");
+        }
     }
 
 }
@@ -77,6 +80,5 @@ export function globalEvents(){
     searchFormInteraction();    
     menuIconInteraction();
     addSwipperController();
-    filterInteraction();
     behaviorOnScroll();
 }
