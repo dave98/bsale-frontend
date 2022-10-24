@@ -11,9 +11,6 @@ export async function getProducts(name, category){
             return null
         }
     }).join("&").slice(0)
-
-    console.log(queryBuilder);
-
     return await ApiFetch(queryBuilder);
 }
 

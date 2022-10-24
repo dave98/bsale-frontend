@@ -1,7 +1,6 @@
 import  BASE_URI  from "../core/config.js";
 
 async function ApiFetch(endpoint, {method, headers, body} = {}){
-    console.log("Queriying");
     if(body){
         headers = {
             "Content-Type": "application/json",
