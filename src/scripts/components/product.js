@@ -7,7 +7,7 @@ export function renderProduct(name, urlImage, price, discount, categoryId){
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="${urlImage}" alt="">
+                <img src="${!urlImage || urlImage == "" ? "/public/images/default/missing.jpg" : urlImage}" alt="">
             </div>
             <div class="content">
                 <h3>${name}</h3>
