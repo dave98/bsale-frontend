@@ -12,20 +12,36 @@ function onChange(event){
     STORE.setSearchName(searchValue);
 }
 
+function onSubmit(event){
+    event.preventDefault();
+}
+
+
 function handleChange(){
     let searchInput = document.getElementById("search-box");
     searchInput.addEventListener( "change", onChange);
 }
 
+function handleSubmit(){
+    let searchForm = document.getElementById("search-product")
+    searchForm.addEventListener("submit", onSubmit)
+}
+
 function removeListeners(){
     let searchInput = document.getElementById("search-box");
     searchInput.removeEventListener("change", onChange);
+
+    let searchForm = document.getElementById("search-product");
+    searchForm.removeEventListener("submit", onSubmit);
 }
 
 
 const SearchBar = {
     toString: function(){ return render()},
-    addListeners: function(){ handleChange() },
+    addListeners: function(){ 
+        handleChange();
+        handleSubmit();
+    },
     removeListeners: function(){ removeListeners() },
 }
 
